@@ -1,0 +1,346 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#000022;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+html,body{ 
+	width:100%;
+	height:100%;
+	background:#000022;
+}
+body:after{
+  content:"";
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+  height: 300000%;
+  width: 3000%;
+  position: fixed;
+  opacity:0.07;
+   animation: animateGrain 8s steps(10) alternate-reverse;
+   animation-iteration-count: infinite;
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body{
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #000000;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* ---- particles.js container ---- */
+
+
+
+#overlay{
+  position:absolute;
+  width:100vw;
+  height:100vh;
+  background-image:linear-gradient(transparent,rgba(0,0,0,0.5));
+  z-index:1
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #000022;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#stuff{
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+#about{
+  padding: 20px;
+  max-width: 900px;
+  width: 75%;
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  font-smooth: always;
+  border-radius: 7px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  transform: perspective(1500px) rotateY(15deg);
+box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+transition: transform 1s ease 0s;
+}
+#about:hover {
+  transform: perspective(3000px) rotateY(5deg);
+}
+#contact{
+   background-color: rgba(255, 255, 255, 0.486);
+      backdrop-filter: blur(10px);
+      width: 200px;
+      border-radius: 7px;
+      margin: 5px;
+      padding: 5px;
+}
+#main{
+  padding: 5px;
+  max-width: 900px;
+  width: 75%;
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 25px;
+  font-smooth: always;
+    border: 1px solid #ffffff;
+  border-radius: 7px;
+  background-color: rgba(0, 12, 37, 0.568);  
+  backdrop-filter: blur(5px);
+  padding: 20px;
+}
+h1{
+  font-size: 50px;
+  font-style: italic;
+  color: rgb(255, 255, 255);
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 45px;
+  margin-top: 25px;
+  margin-bottom: 45px;
+text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+}
+h2{
+  font-size: 25px;
+  font-style: italic;
+  color: rgb(255, 255, 255);
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 10px;
+  font-smooth: always;
+  outline: #111;
+  border: #111;
+  padding: 10px;
+}
+p{
+  margin-left: 15px;
+  font-size: 17px;
+  color: white;
+  font-smooth: always;
+  padding: 10px;
+}
+#blog{
+  font-size: 17px;
+  color: white;
+  margin: 15px;
+  cursor: pointer;
+  background: linear-gradient(0deg, rgba(150, 150, 150, 0.336), rgb(255, 255, 255)) no-repeat right bottom / 0 var(--bg-h);
+transition: background-size 700ms;
+padding: 2px;
+--bg-h: 100%;
+padding-bottom: 5px;
+--bg-h: 2px;
+padding: 10px;
+}
+#blog:where(:hover, :focus-visible) {
+background-size: 100% var(--bg-h);
+background-position-x: left;
+}
+
+#discord{
+  font-size: 17px;
+  color: white;
+  margin: 15px;
+  cursor: pointer;
+  font-smooth: always;
+}
+#discord:hover{
+  text-decoration: underline;
+  color: white;
+ font-smooth: always;
+}
+a {
+  all: unset;
+}
+#project1 {
+  display: none;
+}
+
+a:hover + #project1 {
+  display: block;
+}
+#linkedin{
+  color: #0f85e6;
+  margin: 15px;
+  font-size: 17px;
+  cursor: pointer;
+  font-smooth: always;
+    background: linear-gradient(0deg, rgba(150, 150, 150, 0.336), #0f85e6) no-repeat right bottom / 0 var(--bg-h);
+transition: background-size 700ms;
+padding: 2px;
+--bg-h: 100%;
+padding-bottom: 2px;
+--bg-h: 2px;
+}
+#linkedin:where(:hover, :focus-visible) {
+background-size: 100% var(--bg-h);
+background-position-x: left;
+}
+
+#email{
+  color: #ff00f2;
+  margin: 15px;
+  font-size: 17px;
+  cursor: pointer;
+  font-smooth: always;
+    background: linear-gradient(0deg, rgba(150, 150, 150, 0.336), #ff00f2) no-repeat right bottom / 0 var(--bg-h);
+transition: background-size 700ms;
+padding: 2px;
+--bg-h: 100%;
+padding-bottom: 2px;
+--bg-h: 2px;
+}
+#email:where(:hover, :focus-visible) {
+background-size: 100% var(--bg-h);
+background-position-x: left;
+}
+#python{
+  color: orange;
+}
+#flask{
+  color: rgb(143, 143, 142);
+}
+#mysql{
+  color: rgb(47, 189, 255);
+}
+#java{
+  color: rgb(236, 28, 28);
+}
+#node{
+  color: rgb(27, 196, 27);
+}
+#react{
+  color: rgb(51, 64, 247);
+}
+#js{
+  color: rgb(245, 229, 1);
+}
+#mongodb{
+  color: rgb(1, 245, 111);
+}
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+@keyframes border-dance {
+0% {
+  background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px;
+}
+100% {
+  background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px;
+}
+
+}
+@keyframes animateGrain{
+  0%, 100% { transform:translate(-15%,-20%) }
+  10%{
+    transform:translate(-5%,-10%)
+  }
+  20%{
+    transform:translate(-15%,-20%)
+  }
+  30%{
+    transform:translate(-5%,-10%)
+  }
+  40%{
+    transform:translate(-15%,-20%)
+  }
+  
+  50%{
+    transform:translate(-5%,-10%)
+  }
+  60%{
+    transform:translate(-15%,-20%)
+  }
+  70%{
+    transform:translate(-5%,-10%)
+  }
+  80%{
+    transform:translate(-15%,-20%)
+  }
+  90%{
+    transform:translate(-5%,-10%)
+  }
+  100%{
+    transform:translate(-15%,-20%)
+  }
+ 
+}
